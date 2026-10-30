@@ -74,3 +74,30 @@ const menus = [
 const menuGrid = document.getElementById("menuGrid");
 const menuSearch = document.getElementById("menuSearch");
 const menuCategory = document.getElementById("menuCategory");
+
+function formatRupiah(price) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    maximumFractionDigits: 0
+  }).format(price);
+}
+
+function renderMenus() {
+  if (!menuGrid) return;
+
+  menuGrid.innerHTML = menus.map((menuItem) => `
+    <article class="menu-card">
+      <div class="menu-image" style="position: relative;">
+        <img src="${menuItem.image}" alt="Foto ${menuItem.name}" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+        <span class="image-tag" style="position: absolute; top: 10px; right: 10px; background: rgba(75, 46, 35, 0.85); color: #fff; padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700;">${menuItem.categoryLabel}</span>
+      </div>
+      <div class="menu-info">
+        <h3>${menuItem.name}</h3>
+        <p>${formatRupiah(menuItem.price)}</p>
+      </div>
+    </article>
+  `).join("");
+}
+
+renderMenus();
