@@ -86,7 +86,21 @@ function formatRupiah(price) {
 function renderMenus() {
   if (!menuGrid) return;
 
-  menuGrid.innerHTML = menus.map((menuItem) => `
+  const keyword = menuSearch ? menuSearch.value.trim().toLowerCase() : "";
+  const category = menuCategory ? menuCategory.value : "semua";
+
+  const filteredMenus = menus.filter((menuItem) => {
+    const matchesName = menuItem.name.toLowerCase().includes(keyword);
+    const matchesCategory = category === "semua" || menuItem.category === category;
+    return matchesName && matchesCategory;
+  });
+
+  if (filteredMenus.length === 0) {
+    menuGrid.innerHTML = '<p class="empty-state">Menu tidak ditemukan. Coba kata kunci lain.</p>';
+    return;
+  }
+
+  menuGrid.innerHTML = filteredMenus.map((menuItem) => `
     <article class="menu-card">
       <div class="menu-image" style="position: relative;">
         <img src="${menuItem.image}" alt="Foto ${menuItem.name}" loading="lazy" style="width: 100%; height: 160px; object-fit: cover; display: block;">
@@ -99,5 +113,8 @@ function renderMenus() {
     </article>
   `).join("");
 }
+
+if (menuSearch) menuSearch.addEventListener("input", renderMenus);
+if (menuCategory) menuCategory.addEventListener("change", renderMenus);
 
 renderMenus();
