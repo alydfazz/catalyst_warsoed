@@ -12,7 +12,7 @@ Website landing page interaktif untuk Warung Makan **WARSOED**. Website ini mena
 | Nama | GitHub | Branch | File | Tugas Utama |
 | --- | --- | --- | --- | --- |
 | **Raisya Shava Ramadhani** | [@raisyaramadhani-max](https://github.com/raisyaramadhani-max) | `StrukturHalamanDanHero` | `index.html` | Membuat struktur HTML & konten halaman |
-| **Naura Salsabila** | [@NauraSalsabila29](https://github.com/NauraSalsabila29) | `DesainDanTampilanWebsite` | `style.css` | Styling tampilan visual & layout responsif |
+| **Naura Salsabila** | [@NauraSalsabila29](https://github.com/NauraSalsabila29) | `DesaindanTampilanWebsite` | `style.css` | Styling tampilan visual & layout responsif |
 | **Alya Difa Azzahra** | [@alydfazz](https://github.com/alydfazz) | `KatalogMenu` | `script.js` | Data menu, fitur pencarian, & filter kategori |
 | **Anindita Asha Hameeda** | [@HameedaHere](https://github.com/HameedaHere) | `Contact` | `contact.js` | Navigasi menu mobile & update tahun footer |
 
@@ -64,7 +64,7 @@ Karena file `index.html`, `style.css`, `script.js`, dan `contact.js` terpisah di
    ```
 3. Tarik isi dari semua branch anggota:
    ```bash
-   git merge origin/StrukturHalamanDanHero origin/DesainDanTampilanWebsite origin/KatalogMenu origin/Contact
+   git merge origin/StrukturHalamanDanHero origin/DesaindanTampilanWebsite origin/KatalogMenu origin/Contact
    ```
 4. Buka file `index.html` di browser (atau klik *Go Live* jika pakai extension Live Server di VS Code).
 
@@ -78,7 +78,7 @@ Karena file `index.html`, `style.css`, `script.js`, dan `contact.js` terpisah di
    ```
 2. Ambil file CSS dan JS dari branch lain ke folder lokal:
    ```bash
-   git checkout origin/DesainDanTampilanWebsite -- style.css
+   git checkout origin/DesaindanTampilanWebsite -- style.css
    git checkout origin/KatalogMenu -- script.js
    git checkout origin/Contact -- contact.js
    ```
@@ -91,7 +91,7 @@ Karena file `index.html`, `style.css`, `script.js`, dan `contact.js` terpisah di
 1. Buka halaman GitHub proyek ini.
 2. Pindah ke branch masing-masing anggota dan salin/download filenya:
    * `index.html` (dari branch `StrukturHalamanDanHero`)
-   * `style.css` (dari branch `DesainDanTampilanWebsite`)
+   * `style.css` (dari branch `DesaindanTampilanWebsite`)
    * `script.js` (dari branch `KatalogMenu`)
    * `contact.js` (dari branch `Contact`)
 3. Taruh keempat file tersebut dalam **satu folder yang sama**.
@@ -105,7 +105,7 @@ Jika ingin mengecek pengerjaan di masing-masing branch:
 
 ```bash
 git checkout StrukturHalamanDanHero   # Untuk melihat HTML
-git checkout DesainDanTampilanWebsite     # Untuk melihat CSS
+git checkout DesaindanTampilanWebsite     # Untuk melihat CSS
 git checkout KatalogMenu   # Untuk melihat JS Katalog
 git checkout Contact    # Untuk melihat JS Navigasi
 ```
@@ -115,6 +115,6 @@ git checkout Contact    # Untuk melihat JS Navigasi
 ## Pembagian Tugas & Kontribusi
 
 * **Raisya (`StrukturHalamanDanHero`)**: Menulis seluruh markup `index.html`, menyusun struktur section dari header sampai footer, dan memasukkan konten teks.
-* **Naura (`DesainDanTampilanWebsite`)**: Menulis styling `style.css`, menentukan variabel warna, membuat layout grid katalog & kontak, serta membuat tampilan responsif untuk layar HP.
+* **Naura (`DesaindanTampilanWebsite`)**: Menulis styling `style.css`, menentukan variabel warna, membuat layout grid katalog & kontak, serta membuat tampilan responsif untuk layar HP.
 * **Alya (`KatalogMenu`)**: Menulis logika di `script.js` untuk render data menu, fungsi format Rupiah, dan filter pencarian menu secara langsung.
 * **Asha (`Contact`)**: Menulis fungsi di `contact.js` untuk event buka/tutup navbar mobile dan pengisian tahun otomatis di footer.
