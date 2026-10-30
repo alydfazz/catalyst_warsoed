@@ -48,67 +48,11 @@ Website ini dibuat untuk mempermudah pelanggan WARSOED dalam:
 
 ## Cara Menjalankan Website di Komputer Lokal
 
-Karena file `index.html`, `style.css`, `script.js`, dan `contact.js` terpisah di branch masing-masing, gunakan salah satu cara berikut untuk menjalankannya di lokal:
-
-### Cara 1: Gabungkan di Branch Lokal Sementara (Paling Praktis)
-
-1. Clone repositori ini:
+1. **Clone repositori ini:**
    ```bash
    git clone https://github.com/alydfazz/catalyst_warsoed.git
    cd catalyst_warsoed
-   git fetch --all
-   ```
-2. Buat branch lokal baru:
-   ```bash
-   git checkout -b tes-lokal
-   ```
-3. Tarik isi dari semua branch anggota:
-   ```bash
-   git merge origin/StrukturHalamanDanHero origin/DesaindanTampilanWebsite origin/KatalogMenu origin/Contact
-   ```
-4. Buka file `index.html` di browser (atau klik *Go Live* jika pakai extension Live Server di VS Code).
-
----
-
-### Cara 2: Ambil File dari Branch Lain
-
-1. Pindah ke branch HTML:
-   ```bash
-   git checkout StrukturHalamanDanHero
-   ```
-2. Ambil file CSS dan JS dari branch lain ke folder lokal:
-   ```bash
-   git checkout origin/DesaindanTampilanWebsite -- style.css
-   git checkout origin/KatalogMenu -- script.js
-   git checkout origin/Contact -- contact.js
-   ```
-3. Buka file `index.html` di browser.
-
----
-
-### Cara 3: Manual (Download File)
-
-1. Buka halaman GitHub proyek ini.
-2. Pindah ke branch masing-masing anggota dan salin/download filenya:
-   * `index.html` (dari branch `StrukturHalamanDanHero`)
-   * `style.css` (dari branch `DesaindanTampilanWebsite`)
-   * `script.js` (dari branch `KatalogMenu`)
-   * `contact.js` (dari branch `Contact`)
-3. Taruh keempat file tersebut dalam **satu folder yang sama**.
-4. Buka `index.html` di browser.
-
----
-
-## Cara Pindah Branch di Git
-
-Jika ingin mengecek pengerjaan di masing-masing branch:
-
-```bash
-git checkout StrukturHalamanDanHero   # Untuk melihat HTML
-git checkout DesaindanTampilanWebsite     # Untuk melihat CSS
-git checkout KatalogMenu   # Untuk melihat JS Katalog
-git checkout Contact    # Untuk melihat JS Navigasi
-```
+2. Buka file `index.html` di browser.
 
 ---
 
