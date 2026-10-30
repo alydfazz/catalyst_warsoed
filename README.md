@@ -7,7 +7,7 @@ Website landing page interaktif untuk Warung Makan **WARSOED**. Website ini mena
 
 ---
 
-## Kelompok: HAH? HAYUUUK
+## Kelompok: HA? HAYUUUK
 
 | Nama | GitHub | Branch | File | Tugas Utama |
 | --- | --- | --- | --- | --- |
